@@ -1,7 +1,8 @@
 const arrayNames = ['Alex', 'Amber', 'Chloe', 'Chris', 'Ellie', 'Georgia', 'Jamie', 'Jess', 'Josh', 'Luke', 'Molly', 'Zack'];
 const arrayCareers = ['an account manager', 'a dancer', 'an entrepreneur', 'a gas engineer', 'an influencer', 'a model', 'a nurse', 'a personal trainer', 'a professional footballer', 'a social media creator', 'a student', 'a tradie'];
 const arrayPlaces = ['Essex', 'London', 'Manchester', 'Scotland', 'Wales'];
-const arrayQualities = ['athletic', 'attractive', 'with blonde hair', 'caring', 'confident', 'with dark hair', 'family oriented', 'fit', 'funny', 'genuine', 'that goes to the gym', 'with good banter', 'with good teeth', 'honest', 'kind hearted', 'loyal', 'with a nice smile', 'spontaneous', 'tall'];
+const arrayReasons = ["I've been single my whole life and I'm ready to find love", "I'm ready for love but I always end up in situationships, so I'm hoping the Love Island Villa can help me find my person", "I've always been a bit of a player, but I'm ready to give up the single life and settle down", "I do love flirting, but it always gets me in trouble, so I'm ready to turn over a new leaf and give a proper relationship a go", "I'm tired of endless dating...I just feel ready to find the one"];
+const arrayQualities = ['athletic', 'attractive', 'with blonde hair', 'caring', 'cheeky', 'confident', 'with dark hair', 'family oriented', 'fit', 'funny', 'genuine', 'that goes to the gym', 'with good banter', 'with good teeth', 'honest', 'kind hearted', 'loyal', 'with a nice smile', 'spontaneous', 'tall'];
 
 const randomIndex = (array) => Math.floor(Math.random() * array.length); // Would select a random number between 0 and the lenght of the array (exclusive --> so as if it was array.lenght -1)
 
@@ -14,6 +15,8 @@ const generateIslander = () => {
     // console.log(career);
     let place = arrayPlaces[randomIndex(arrayPlaces)];
     // console.log(place);
+    let reason = arrayReasons[randomIndex(arrayReasons)];
+    // console.log(reason);
     let firstQuality = arrayQualities[randomIndex(arrayQualities)];
     let secondQuality = arrayQualities[randomIndex(arrayQualities)];
     let thirdQuality = arrayQualities[randomIndex(arrayQualities)];
@@ -32,7 +35,7 @@ const generateIslander = () => {
         thirdQuality = arrayQualities[randomIndex(arrayQualities)];
     }
     // console.log(`AFTER the while loop, the firstQuality is ${firstQuality}, the secondQuality is ${secondQuality} and the thirdQuality is ${thirdQuality}`);
-    console.log(`Meet ${name}: Hi my name is ${name}, I'm ${age} and I'm ${career} from ${place}. I'm coming on Love Island because I'm tired of endless dating, I'm ready to find the one! If I had to describe my ideal type, I'd say someone ${firstQuality}, ${secondQuality} and ${thirdQuality}!`)
+    console.log(`Meet ${name}: Hi my name is ${name}, I'm ${age} and I'm ${career} from ${place}. I'm coming on Love Island because ${reason}! If I had to describe my ideal type, I'd say someone ${firstQuality}, ${secondQuality} and ${thirdQuality}!`)
 }
 
 generateIslander()
