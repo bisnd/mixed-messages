@@ -8,14 +8,16 @@ const randomIndex = (array) => Math.floor(Math.random() * array.length); // Woul
 const generateIslander = () => {
     let name = arrayNames[randomIndex(arrayNames)]; // Assigns a random name from arrayNames to the variable "name"
     // console.log(name);
+    let age = Math.floor(Math.random() * (27 - 20 + 1) + 20); // Using directly instead of creating a function (min, max) {return Math.floor(Math.random() * (max - min + 1) + min)} and applying it with (20, 27)
+    // console.log(age);
     let career = arrayCareers[randomIndex(arrayCareers)];
     // console.log(career);
     let place = arrayPlaces[randomIndex(arrayPlaces)];
-    console.log(place);
+    // console.log(place);
     let firstQuality = arrayQualities[randomIndex(arrayQualities)];
     let secondQuality = arrayQualities[randomIndex(arrayQualities)];
     let thirdQuality = arrayQualities[randomIndex(arrayQualities)];
-    console.log(`BEFORE the while loop, the firstQuality is ${firstQuality}, the secondQuality is ${secondQuality} and the thirdQuality is ${thirdQuality}`);
+    // console.log(`BEFORE the while loop, the firstQuality is ${firstQuality}, the secondQuality is ${secondQuality} and the thirdQuality is ${thirdQuality}`);
     /* Two separate "while" loops
     while (secondQuality === firstQuality) {
         secondQuality = arrayQualities[randomIndex(arrayQualities)]
@@ -29,8 +31,8 @@ const generateIslander = () => {
         secondQuality = arrayQualities[randomIndex(arrayQualities)];
         thirdQuality = arrayQualities[randomIndex(arrayQualities)];
     }
-    console.log(`AFTER the while loop, the firstQuality is ${firstQuality}, the secondQuality is ${secondQuality} and the thirdQuality is ${thirdQuality}`);
-    console.log(`Meet ${name}: Hi my name is ${name}, and I'm ${career} from ${place}. I'm coming on Love Island because I'm ready to find the one! I'm looking for someone ${firstQuality}, ${secondQuality} and ${thirdQuality}!`)
+    // console.log(`AFTER the while loop, the firstQuality is ${firstQuality}, the secondQuality is ${secondQuality} and the thirdQuality is ${thirdQuality}`);
+    console.log(`Meet ${name}: Hi my name is ${name}, I'm ${age} and I'm ${career} from ${place}. I'm coming on Love Island because I'm tired of endless dating, I'm ready to find the one! If I had to describe my ideal type, I'd say someone ${firstQuality}, ${secondQuality} and ${thirdQuality}!`)
 }
 
 generateIslander()
